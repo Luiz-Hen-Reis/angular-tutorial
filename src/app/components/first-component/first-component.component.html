@@ -1,10 +1,11 @@
-<div>
-  <h1>{{ variable }}</h1>
-  <button (click)="varChange()">Aumentar</button>
+<h1>{{ variable }}</h1>
+<button (click)="varChange()">Aumentar</button>
 
-  <app-second-component
-    *ngIf="show"
-    [namesInput]="names"
-  ></app-second-component>
-  <button (click)="show = !show">Destruir componente</button>
-</div>
+<app-second-component
+  *ngIf="show; else elseTemplate"
+  [namesInput]="names"
+></app-second-component>
+
+<ng-template #elseTemplate>Leonardo!</ng-template>
+
+<button (click)="show = !show">Destruir componente</button>
