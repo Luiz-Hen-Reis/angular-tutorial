@@ -1,2 +1,10 @@
-<h1>{{ variable }}</h1>
-<button (click)="varChange()">Aumentar</button>
+<div>
+  <h1>{{ variable }}</h1>
+  <button (click)="varChange()">Aumentar</button>
+
+  <app-second-component
+    *ngIf="show"
+    [namesInput]="names"
+  ></app-second-component>
+  <button (click)="show = !show">Destruir componente</button>
+</div>

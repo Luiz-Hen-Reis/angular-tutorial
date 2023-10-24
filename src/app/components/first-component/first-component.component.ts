@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-first-component',
@@ -6,33 +6,42 @@ import { Component } from '@angular/core';
   styleUrls: ['./first-component.component.css'],
 })
 export class FirstComponentComponent {
-  ngOnChanges(): void {
-    console.log('ngOnChanges');
-  }
+  variable: number = 1;
+  // private readonly variable2: number = 1;
 
-  ngOnInit(): void {
-    console.log('ngOnInit');
-  }
+  show = true;
 
-  ngDoCheck(): void {
-    console.log('ngDoCheck');
-  }
-
-  ngAfterContentInit(): void {
-    console.log('ngAfterContentInit');
-  }
-
-  ngAfterContentChecked(): void {
-    console.log('ngAfterContentChecked');
-  }
-
-  ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked');
-  }
-
-  variable = 1;
+  @Output() names: string[] = ['Lucas', ' Isaac', ' Juliana'];
 
   varChange() {
     this.variable++;
   }
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy');
+  }
+
+  // ngOnChanges(): void {
+  //   console.log('ngOnChanges');
+  // }
+
+  // ngOnInit(): void {
+  //   console.log('ngOnInit');
+  // }
+
+  // ngDoCheck(): void {
+  //   console.log('ngDoCheck');
+  // }
+
+  // ngAfterContentInit(): void {
+  //   console.log('ngAfterContentInit');
+  // }
+
+  // ngAfterContentChecked(): void {
+  //   console.log('ngAfterContentChecked');
+  // }
+
+  // ngAfterViewChecked(): void {
+  //   console.log('ngAfterViewChecked');
+  // }
 }
