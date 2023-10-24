@@ -1,0 +1,13 @@
+<p>pipe-twdb works!</p>
+<form>
+  <input
+    type="text"
+    name="username"
+    placeholder="Coloque seu primeiro nome"
+    [(ngModel)]="username"
+  />
+</form>
+
+<p>{{ username | uppercase }}</p>
+<p>{{ username | titlecase }}</p>
+<p>{{ username | lowercase }}</p>
