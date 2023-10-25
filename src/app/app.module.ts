@@ -10,6 +10,7 @@ import { ListRendersComponent } from './components/list-renders/list-renders.com
 import { PipeTwdbComponent } from './components/pipe-twdb/pipe-twdb.component';
 import { FormsModule } from '@angular/forms';
 import { ComponentServiceComponent } from './components/component-service/component-service.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ComponentServiceComponent } from './components/component-service/compon
     ListRendersComponent,
     PipeTwdbComponent,
     ComponentServiceComponent,
+    HeaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
